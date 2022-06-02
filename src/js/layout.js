@@ -31,7 +31,6 @@ const Layout = () => {
 						</Route>
 						
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
