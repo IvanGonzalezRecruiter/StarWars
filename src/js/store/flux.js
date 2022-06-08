@@ -96,6 +96,15 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((resp) => setStore({ character: resp.results }))
           .catch((error) => console.log(error));
       },
+      verPlaneta: (id) => {
+        console.log(id);
+        let link = `https://www.swapi.tech/api/planets/1`
+
+        fetch(link)
+        .then((resp) => resp.json())
+        .then((resp) => setStore({ planet: resp.results }))
+        .catch((error) => console.log(error))
+      }, 
     },
   };
 };

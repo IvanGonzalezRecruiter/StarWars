@@ -7,9 +7,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import CharacterDetails from "./views/characterDetails"
 import injectContext from "./store/appContext";
-
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Planeta from "./views/planetDetails";
 
 //create your first component
 const Layout = () => {
@@ -29,7 +29,9 @@ const Layout = () => {
 						<Route exact path="/people/:ids">
 							<CharacterDetails />
 						</Route>
-						
+						<Route exact path="/planet/:ids">
+							<Planeta />
+						</Route>
 					</Switch>
 				</ScrollToTop>
 			</BrowserRouter>

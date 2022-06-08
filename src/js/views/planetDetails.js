@@ -1,6 +1,15 @@
-import React from 'react'
+import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
+import React, { useState, useContext, useEffect } from "react";
 
 export default function Planeta() {
+    const params = useParams();
+    console.log(params);
+    const { store, actions } = useContext(Context);
+    useEffect(() => {
+        actions.verPlaneta(params.ids)
+    }, [params])
+    console.log(store.planet)
   return (
     <div>
         <div className='row'>
@@ -8,8 +17,7 @@ export default function Planeta() {
                 <img />
             </div>
             <div className='col-6'>
-                <h1>aa</h1>
-                <p>aa</p>
+                <h1>{params.ids}</h1>
             </div>
         </div>
         <div className='row border-top border-danger' >
