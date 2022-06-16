@@ -8,7 +8,7 @@ export default function Planeta() {
     const { store, actions } = useContext(Context);
     useEffect(() => {
         actions.verPlaneta(params.ids)
-    }, [params])
+    }, [params.ids])
     console.log(store.planet)
   return (
     <div>
