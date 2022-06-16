@@ -10,11 +10,12 @@ export default function Planeta() {
         actions.verPlaneta(params.ids)
     }, [params.ids])
     console.log(store.planet)
+    const index = params.ids - 1;
   return (
     <div>
         <div className='row'>
             <div className='col-6'>
-                <img />
+            <img width={450} height={300} src={store.imgPlanets[index].url} />
             </div>
             <div className='col-6'>
                 <h1>{params.ids}</h1>
