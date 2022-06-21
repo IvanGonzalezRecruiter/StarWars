@@ -98,7 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       verPlaneta: (id) => {
         console.log(id);
-        let link = `https://www.swapi.tech/api/planets/1`
+        let link = `https://www.swapi.tech/api/planets/${id}`
 
         fetch(link)
         .then((resp) => resp.json())
